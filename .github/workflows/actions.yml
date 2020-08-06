@@ -11,6 +11,8 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
+      - name: payload
+        run: echo ${{ github.event.client_payload.env }}
       - name: List Files and Built in GitHub Environment Variables
         run: |
           pwd
